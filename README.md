@@ -13,8 +13,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution Link](https://www.frontendmentor.io/solutions/sign-up-form-with-js-fyhzF-O4qG)
-- [Live Demo Link](https://emanradwan114.github.io/SignUp-Form/)
+- [Live Demo Link](https://emanradwan11499.github.io/SignUp-Form/)
 
 ### Built with
 
