@@ -1,0 +1,248 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700
+*/
+/* *start of general styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: rgb(56, 204, 140);
+  --blue: hsl(248, 32%, 49%);
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
+  font-family: "Poppins", sans-serif;
+}
+/* *end of general styles */
+
+/* *start of common styles */
+.pageTitle,
+.pageTitle ~ p,
+.formHeader,
+button[type="submit"] {
+  color: white;
+}
+
+.pageTitle,
+.formHeader {
+  margin-bottom: 1.5rem;
+}
+
+.formHeader,
+.formControl input,
+.terms span,
+.errMsg {
+  font-weight: 600;
+}
+.formHeader,
+.formControl input {
+  border-radius: 7px;
+}
+
+.formHeader,
+.formControl input,
+button[type="submit"] {
+  padding: 0.85rem;
+}
+
+.formContent,
+button[type="submit"] {
+  border-radius: 5px;
+}
+
+.formHeader,
+.terms {
+  color: var(--grayishBlue);
+}
+
+.formHeader,
+.formContent {
+  box-shadow: 0 5px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.terms span,
+.errMsg {
+  color: var(--red);
+}
+
+button[type="submit"],
+.successMsg {
+  margin-bottom: 0.8rem;
+}
+
+.formHeader,
+.successMsg {
+  text-align: center;
+}
+/* *end of common styles */
+
+/* *start of main section */
+main {
+  background-image: url(../Images/bg-intro-desktop.png);
+  background-color: var(--red);
+  background-size: cover;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+section.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5rem;
+  min-height: 100vh;
+}
+
+.content,
+.formBox {
+  width: 50%;
+}
+
+.pageTitle {
+  font-size: calc(2rem + 0.5vw);
+  line-height: 2.7rem;
+}
+
+.formHeader {
+  background-color: var(--blue);
+  font-size: 0.9rem;
+}
+
+.formHeader span {
+  color: white;
+}
+
+.formContent {
+  background-color: white;
+  padding: 1.8rem;
+}
+
+.formControl {
+  position: relative;
+}
+.formControl input {
+  width: 100%;
+  border: 1px solid var(--grayishBlue);
+  color: black;
+}
+
+.formControl input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+.formControl input:focus-visible {
+  outline: 1px solid var(--blue);
+}
+
+button[type="submit"] {
+  background-color: var(--green);
+  border: none;
+  box-shadow: 0 0.5px 1px 1px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 500ms;
+}
+
+button[type="submit"]:hover {
+  background-color: rgba(56, 204, 140, 0.8);
+}
+
+.terms {
+  font-size: 0.7rem;
+}
+
+.terms span {
+  color: var(--red);
+}
+
+.errMsg {
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+}
+
+.formControl {
+  margin-bottom: 0.3rem;
+}
+
+.errIcon {
+  position: absolute;
+  right: 0.85rem;
+  top: 0.85rem;
+  width: 18px;
+  display: none;
+}
+
+.successMsg {
+  color: var(--green);
+}
+
+/* *end of main section  */
+
+/* *start of media query */
+@media screen and (max-width: 768px) {
+  .content,
+  .formBox {
+    width: 100%;
+  }
+
+  section.signup {
+    flex-wrap: wrap;
+    padding: 3.5rem 0;
+    row-gap: 3.5rem;
+  }
+
+  .pageTitle,
+  .pageTitle ~ p {
+    text-align: center;
+  }
+
+  .pageTitle {
+    font-size: calc(1.5rem + 0.5vw);
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+/* *end of media query  */
